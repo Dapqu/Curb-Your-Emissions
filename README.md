@@ -1,6 +1,6 @@
 # 11248 Group 1
-
-Member1: 
-Member2: Colin Rocks
-Member3: 
-Member4: 
+Add a merge conflict
+Member1: Dilimulati Diliyaer 
+Member2: Collin Rocks 
+Member3: Daniel Marzo 
+Member4: William Lawson
