@@ -3,4 +3,4 @@
 Member1: 
 Member2: Colin Rocks
 Member3: 
-Member4: 
+Member4: William Lawson
