@@ -1,2 +1,6 @@
-# CEN3031
-IBM Hackathon Power Consumption Video Game
+# 11248 Group 1
+
+Member1:
+Member2:
+Member3:
+Member4:
