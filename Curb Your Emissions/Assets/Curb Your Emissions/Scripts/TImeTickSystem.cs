@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class TImeTickSystem
+public static class TimeTickSystem
 {
     public class OnTickEventArgs : EventArgs {
         public int tick;
@@ -13,7 +13,7 @@ public static class TImeTickSystem
     public static event EventHandler<OnTickEventArgs> OnTick_5;
 
     [SerializeField]
-    private const float TICK_TIMER_MAX = 0.2f;
+    private const float TICK_TIMER_MAX = 1f;
 
     private static GameObject timeTickSystemGameObject;
     private static int tick;
@@ -23,6 +23,10 @@ public static class TImeTickSystem
             timeTickSystemGameObject = new GameObject("TimeTickSystem");
             timeTickSystemGameObject.AddComponent<TimeTickSystemObject>();
         }
+    }
+
+    public static int GetTick() {
+        return tick;
     }
 
     private class TimeTickSystemObject : MonoBehaviour {
@@ -44,9 +48,7 @@ public static class TImeTickSystem
                     if (OnTick_5 != null) {
                     OnTick_5(this, new OnTickEventArgs {tick = tick});
                     }
-                    Debug.Log("MEGATICK!");
                 }
-                Debug.Log("tick: " + tick);
             }
         }
     }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Curb Your Emissions/Scenes/Menu.unity
     guid: 5e3bbb4b4aada754cb628f6031d2fc0b
   - enabled: 1
+    path: Assets/Curb Your Emissions/Scenes/GameLogic.unity
+    guid: b424f577c5a5e0a44a1b2dd38fe90864
+  - enabled: 1
     path: Assets/Curb Your Emissions/Scenes/GridMap.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
