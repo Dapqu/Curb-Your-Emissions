@@ -18,11 +18,13 @@ public class Timer : MonoBehaviour
 
     private void Awake(){//creates a timer object at the start of the program
         instance = this;
+        
     }
 
     private void Start(){
         timeCounter.text = "Time Played: 00:00.00";
         timerOn = false;
+        BeginTimer();
     }
 
     public void BeginTimer(){
