@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class DemoTransition : MonoBehaviour
 {
-    public void Demo() {
+    public void Forward() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void Backward() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

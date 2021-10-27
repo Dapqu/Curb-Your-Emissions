@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
     public static Timer instance;// we can use this to call the timer functions
 
-    public Text timeCounter;
+    public TextMeshProUGUI timeCounter;
 
     private TimeSpan timePlaying;
 
