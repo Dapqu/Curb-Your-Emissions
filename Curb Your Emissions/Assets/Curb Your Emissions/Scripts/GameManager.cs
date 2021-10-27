@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour
             emissionText.text = emission.ToString();
             powerText.text = power.ToString();
 
+            Debug.Log("GoldPerTick: " + goldPerTick);
+            Debug.Log("EmissionPerTick: " + emissionPerTick);
+            Debug.Log("PowerPerTick: " + powerPerTick);
+
             CMDebug.TextPopupMouse("Tick: " + TimeTickSystem.GetTick());
         };
     }
