@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using CodeMonkey;
-using CodeMonkey.Utils;
+//using CodeMonkey;
+//using CodeMonkey.Utils;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             emissionText.text = emission.ToString();
             powerText.text = power.ToString();
 
-            CMDebug.TextPopupMouse("Tick: " + TimeTickSystem.GetTick());
+            //CMDebug.TextPopupMouse("Tick: " + TimeTickSystem.GetTick());
         };
     }
 

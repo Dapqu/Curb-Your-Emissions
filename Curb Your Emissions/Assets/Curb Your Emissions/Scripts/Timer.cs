@@ -22,8 +22,9 @@ public class Timer : MonoBehaviour
     }
 
     private void Start(){
-        timeCounter.text = "Time Played: 00:00.00";
+        timeCounter.text = "Time Played: 00:00:00";
         timerOn = false;
+        BeginTimer();
     }
 
     public void BeginTimer(){
@@ -45,7 +46,7 @@ public class Timer : MonoBehaviour
 
             timeSpent += Time.deltaTime;//get time between frames
             timePlaying = TimeSpan.FromSeconds(timeSpent);//add to total time
-            string displayTime = "Time Played: " + timePlaying.ToString("hh':'mm'.'ss"); // convert time to a string
+            string displayTime = "Time Played: " + timePlaying.ToString("hh':'mm':'ss"); // convert time to a string
             timeCounter.text = displayTime;
 
             yield return null;
