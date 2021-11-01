@@ -13,7 +13,7 @@ public static class TimeTickSystem
     public static event EventHandler<OnTickEventArgs> OnTick_5;
 
     [SerializeField]
-    private const float TICK_TIMER_MAX = 1f;
+    public const float TICK_TIMER_MAX = 1f;
 
     private static GameObject timeTickSystemGameObject;
     private static int tick;
