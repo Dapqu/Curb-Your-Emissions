@@ -4,8 +4,8 @@ using UnityEngine;
  
 public class GridManager : MonoBehaviour
 {
-    public static int width = 16;
-    public static int height = 9;
+    public static int width = 18;
+    public static int height =9;
  
     [SerializeField] private Tile tilePrefab;
  
@@ -18,7 +18,7 @@ public class GridManager : MonoBehaviour
     void GenerateGrid() {
         for (int i=0; i<width; i++) {
             for (int j=0; j<height; j++) {
-                var spawnedTile = Instantiate(tilePrefab, new Vector3(i, j), Quaternion.identity);
+                var spawnedTile = Instantiate(tilePrefab, new Vector3(i + 1, j), Quaternion.identity);
                 spawnedTile.name = $"Tile {i} {j}";
  
                 var isOffset = (i%2 == 0 && j%2 == 1) || (i%2 == 1 && j%2 ==0);
@@ -26,7 +26,7 @@ public class GridManager : MonoBehaviour
             }
         }
  
-        cam.transform.position = new Vector3((float)width/2 -0.5f, (float)height/2 -0.5f, -10);
+        cam.transform.position = new Vector3((float)width/2 -0.5f, (float)height/2 -0.5f, -100);
     }
 }
  
