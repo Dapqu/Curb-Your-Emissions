@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
 
     private bool timerOn;
 
-    private float timeSpent;
+    public float timeSpent;
 
     private void Awake(){//creates a timer object at the start of the program
         instance = this;
@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
         timerOn = true;
        
         timeSpent = 0f;
+        //LoadGame();
 
         StartCoroutine(UpdateTimer());
     }
@@ -54,7 +55,13 @@ public class Timer : MonoBehaviour
     
     }
 
+    public void SaveGame() {
+        SaveSystem.SaveTimer(this);
+    }
 
+    public void LoadGame() {
+        SavedData data = SaveSystem.LoadTimerData();
 
-
+        this.timeSpent = data.timeSpent;
+    }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DragDrop : MonoBehaviour
 {
     void OnMouseDrag() {
-        transform.position = GetMousePos(); 
+        transform.position = GetMousePos();
     }
 
     Vector3 GetMousePos() {
