@@ -29,9 +29,6 @@ public class Timer : MonoBehaviour
 
     public void BeginTimer(){
         timerOn = true;
-       
-        timeSpent = 0f;
-        //LoadGame();
 
         StartCoroutine(UpdateTimer());
     }
@@ -53,15 +50,5 @@ public class Timer : MonoBehaviour
             yield return null;
         }
     
-    }
-
-    public void SaveGame() {
-        SaveSystem.SaveTimer(this);
-    }
-
-    public void LoadGame() {
-        SavedData data = SaveSystem.LoadTimerData();
-
-        this.timeSpent = data.timeSpent;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator transition;
     [SerializeField]
     private GameObject mainMenu;
     [SerializeField]
@@ -25,7 +26,13 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadLevel(int levelIndex) {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(levelIndex);
     }
 
     public void ExitGame() {
