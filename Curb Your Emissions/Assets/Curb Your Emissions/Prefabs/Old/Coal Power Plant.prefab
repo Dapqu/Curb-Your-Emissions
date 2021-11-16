@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6533172058048840736}
   - component: {fileID: 6533172058048840738}
-  - component: {fileID: 6533172058048840737}
   - component: {fileID: 6533172058048840748}
   - component: {fileID: 6533172058048840739}
+  - component: {fileID: -6792775124206714043}
   m_Layer: 0
   m_Name: Coal Power Plant
   m_TagString: Untagged
@@ -85,18 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6533172058048840737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533172058048840743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f556d827407d454cb517badc195326a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6533172058048840748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +123,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &-6792775124206714043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533172058048840743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f556d827407d454cb517badc195326a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

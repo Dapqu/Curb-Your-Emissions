@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3758803204459872725}
   - component: {fileID: 3758803204459872730}
-  - component: {fileID: 3758803204459872731}
   - component: {fileID: 3758803204459872724}
   - component: {fileID: 3758803204459872729}
+  - component: {fileID: -6956138284096808764}
   m_Layer: 0
   m_Name: Geothermal Power Plant
   m_TagString: Untagged
@@ -85,18 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3758803204459872731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3758803204459872726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f556d827407d454cb517badc195326a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &3758803204459872724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,5 +121,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2ab9c022a820bf4ebf2e90e64abf603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6956138284096808764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3758803204459872726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f556d827407d454cb517badc195326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
