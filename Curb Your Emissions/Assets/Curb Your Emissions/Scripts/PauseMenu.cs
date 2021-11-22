@@ -13,28 +13,37 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject audioMenu;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+
 
     // Update is called once per frame
     [System.Obsolete]
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (gameIsPuased) {
-                if (pauseMenu.active) {
-                    Resume();
+        if (!winScreen.active && !loseScreen.active) {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                if (gameIsPuased) {
+                    if (pauseMenu.active) {
+                        Resume();
+                    }
+                    if (controlsMenu.active) {
+                        pauseMenu.SetActive(true);
+                        controlsMenu.SetActive(false);
+                    }
+                    if (audioMenu.active) {
+                        pauseMenu.SetActive(true);
+                        audioMenu.SetActive(false);
+                    }
                 }
-                if (controlsMenu.active) {
-                    pauseMenu.SetActive(true);
-                    controlsMenu.SetActive(false);
-                }
-                if (audioMenu.active) {
-                    pauseMenu.SetActive(true);
-                    audioMenu.SetActive(false);
+                else {
+                    Pause();
                 }
             }
-            else {
-                Pause();
-            }
+        }
+        else {
+            if (Input.GetKeyDown(KeyCode.Escape))
+                Application.Quit();
         }
     }
 

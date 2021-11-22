@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     public GameObject solar;
     public GameObject wind;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+
     void Start() {
         TimeTickSystem.Create();
         Load();
@@ -52,39 +55,6 @@ public class GameManager : MonoBehaviour
         };
     }
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            ChangePowerPerTick(1f);
-            ChangeEmissionPerTick(0.82f);
-            ChangeGold(-1000f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            ChangePowerPerTick(2f);
-            ChangeEmissionPerTick(0.5f);
-            ChangeGold(-2000f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            ChangePowerPerTick(1f);
-            ChangeEmissionPerTick(0.24f);
-            ChangeGold(-1500f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            ChangePowerPerTick(5f);
-            ChangeEmissionPerTick(0.6f);
-            ChangeGold(-1000000f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5)) {
-            ChangePowerPerTick(3f);
-            ChangeEmissionPerTick(1.5f);
-            ChangeGold(-100000f);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6)) {
-            ChangePowerPerTick(1f);
-            ChangeEmissionPerTick(0.1f);
-            ChangeGold(-1000f);
-        }
-    }
-
     public void ChangeGoldPerTick(float amount) {
         goldPerTick = goldPerTick + amount;
     }
@@ -95,7 +65,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void ChangeGold(float amount) {
-        gold = gold + amount;
+        gold = gold - amount;
     }
 
     public void ChangeEmissionPerTick(float amount) {
@@ -104,6 +74,10 @@ public class GameManager : MonoBehaviour
 
     public void UpdateEmission() {
         emission += emissionPerTick;
+        if (emission >= maxEmission) {
+            loseScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
         emissionBar.SetEmission(emission);
     }
 
@@ -113,6 +87,10 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePower() {
         power += powerPerTick;
+        if (power >= maxPower) {
+            winScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
         powerBar.SetPower(power);
     }
 
