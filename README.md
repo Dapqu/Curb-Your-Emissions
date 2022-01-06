@@ -2,7 +2,7 @@
 
 Project Manager: Dilimulati Diliyaer
 
-Scrub Master: Collin Rocks
+Scrum Master: Collin Rocks
 
 Team Member: Daniel Marzo
 
